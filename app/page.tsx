@@ -1,10 +1,10 @@
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-950 px-4 text-center text-white">
-      <h1 className="text-5xl font-bold tracking-tight">Welcome to the Codex Course</h1>
-      <p className="mt-4 max-w-lg text-lg text-gray-400">
-        Learn how to build modern apps with OpenAI Codex. This demo project will guide you through
-        the essentials step by step.
+    <main className="mx-auto flex min-h-screen max-w-3xl flex-col justify-center px-6 py-16">
+      <p className="text-sm font-medium uppercase tracking-wider text-gray-500">TinyNotes</p>
+      <h1 className="mt-3 text-4xl font-semibold tracking-tight">Gyoker oldal</h1>
+      <p className="mt-4 text-lg text-gray-600">
+        Dummy oldal a SPEC szerinti kesobbi session-alapu atiranyitashoz.
       </p>
     </main>
   );
