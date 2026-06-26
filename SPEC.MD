@@ -150,6 +150,25 @@ Tabla: schema_migrations
 - Kliensnek egyszer a nyers tokenes URL adodik vissza
 - Feloldas: bejovo token hash-elese es hash alapjan kereses
 
+## 7.4 Migrations
+
+### Folder layout
+
+* `migrations/0001_init.sql`, `0002_notes.sql`, etc.
+* `scripts/migrate.ts`:
+
+  * Ensures `schema_migrations` exists.
+  * Reads migration files sorted by filename.
+  * Applies each within a transaction.
+  * Records applied version (filename) with timestamp.
+  * On failure: rollback and exit non-zero.
+
+### Migration content
+
+* 0001: better-auth tables + indexes.
+* 0002: `note`, `note_share`, indexes.
+
+
 ## 8. Alkalmazas retegzes
 
 Javasolt mappaszint (iranyelv):
